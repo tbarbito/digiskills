@@ -1,0 +1,191 @@
+/* Custom CSS for Посібник цифрових навичок */
+
+:root {
+    --ukraine-blue: #005BBB;
+    --ukraine-yellow: #FFD500;
+    --text-dark: #333;
+    --text-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Using a common sans-serif font */
+    color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ukraine-blue);
+}
+
+header {
+    background-color: var(--ukraine-blue);
+    color: var(--text-light);
+}
+
+header h1, header h2 {
+    color: var(--text-light);
+}
+
+#presentation {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 4rem 0;
+}
+
+#benefits {
+    padding: 4rem 0;
+}
+
+#benefits .col-md-4 p {
+    /* Placeholder for icon styling */
+    padding-left: 30px; /* Space for icon */
+    position: relative;
+}
+
+#benefits .col-md-4 p::before {
+    /* Basic icon placeholder style */
+    content: '\2713'; /* Checkmark symbol, replace with actual icon later */
+    position: absolute;
+    left: 0;
+    color: var(--ukraine-yellow);
+    font-weight: bold;
+}
+
+#target-audience {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+#target-audience ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#target-audience li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#target-audience li::before {
+    content: '\27A4'; /* Arrow symbol */
+    position: absolute;
+    left: 0;
+    color: var(--ukraine-blue);
+}
+
+#guide-content {
+     padding: 4rem 0;
+}
+
+#guide-content ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+#testimonials {
+    background-color: var(--ukraine-blue);
+    color: var(--text-light);
+    padding: 4rem 0;
+}
+
+#testimonials h3 {
+    color: var(--text-light);
+}
+
+#testimonials .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-light);
+}
+
+#testimonials .blockquote-footer {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#cta {
+    background-color: var(--ukraine-yellow);
+    padding: 4rem 0;
+    border-top: 5px solid var(--ukraine-blue);
+    border-bottom: 5px solid var(--ukraine-blue);
+}
+
+#cta h3 {
+    color: var(--ukraine-blue);
+}
+
+#cta p {
+    color: var(--text-dark);
+}
+
+#cta .btn-primary {
+    background-color: var(--ukraine-blue);
+    border-color: var(--ukraine-blue);
+    color: var(--ukraine-yellow);
+    font-weight: bold;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+}
+
+#cta .btn-primary:hover {
+    background-color: #004a9a; /* Darker blue on hover */
+    border-color: #004a9a;
+    color: var(--ukraine-yellow);
+}
+
+#cta span[style*="line-through"] {
+    color: #6c757d; /* Muted color for strikethrough price */
+}
+
+#cta strong {
+    font-size: 1.5rem;
+    color: var(--ukraine-blue);
+}
+
+#faq {
+    padding: 4rem 0;
+}
+
+.accordion-button {
+    color: var(--ukraine-blue);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 91, 187, 0.1); /* Light blue background when open */
+    color: var(--ukraine-blue);
+}
+
+footer {
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--ukraine-blue);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments (Bootstrap handles most, add specifics if needed) */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    #cta .btn-primary { font-size: 1rem; padding: 10px 20px; }
+}
+
+
+
+/* Add pulse animation for CTA button */
+@keyframes pulse-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse-animation 1s ease-in-out;
+}
+
